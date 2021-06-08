@@ -1,0 +1,14 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>displaying date&time by script inside the body</title>
+</head>
+<body>
+	<p>date/time:<span id="datetime"></span></p>
+	<script>
+		var dt=new date();
+		document.getElementByid('datetime').innerhtml=dt.tolocaldatestring();
+	</script>
+</body>
+</html>
