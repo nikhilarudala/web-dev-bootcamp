@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>radiobutton and checkboxes</title>
+	<style>
+		p{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<label>gender</label>
+		<input type="radio" id="gender" name="gender" value="male">male
+		<input type="radio" id="gender" name="gender" value="female">female
+		<br/><br/>
+	</form>
+
+	<button onclick="readData()">submit</button>
+	<br/><br/>
+	<p id="result"></p>
+	
+	<script>
+		function readData() 
+		{
+			var r=document.getElementsByName('gender').value;
+			document.getElementsByTagName('result').innerHTML=r;
+
+		}
+	</script>
+</body>
+</html>

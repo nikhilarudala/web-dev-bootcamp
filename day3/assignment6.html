@@ -1,0 +1,47 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>creating the input that reads the data</title>
+</head>
+<body>
+	<fieldset>
+		<legend>details</legend>
+		NAMEE:<input type="text" id="nikki" required="" placeholder="enter your name"/><br/><br/>
+		AADHAR NO:<input type="tel" id="nikki1" placeholder="enter your aadhar number"/><br/><br/>
+		ADDRESS<textarea rows="6" cols="6" id="nikki2">enter your address</textarea>
+	</fieldset>
+	
+	<button type="button" onclick="asif()">click here</button>
+	
+
+	<h3>result table</h3>
+	
+
+	<table border="1" >
+		<tr>
+			<th>NAME</th>
+			<th>AADHAR NO</th>
+			<th>ADDRESS</th>
+		</tr>
+		<tr>
+			<td id="qw">not yet read!!</td>
+			<td id="qw1">not yet read!!</td>
+			<td id="qw2">not yet read!!</td>
+		</tr>
+	</table>
+
+	<script>
+		function asif() {
+			// body...
+			var nikki=document.getElementsByID('nikki').value;
+			var nikki1=document.getElementsByID('nikki1').value;
+			var nikki2=document.getElementsByID('nikki2').value;
+			document.getElementsByID('qw').innerHTML=nikki;
+			document.getElementsByID('qw1').innerHTML=nikki1;
+			document.getElementsByID('qw2').innerHTML=nikki2;
+		}
+
+	</script>
+
+</body>
+</html>

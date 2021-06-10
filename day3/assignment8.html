@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html>
+<head>
+
+</head>
+<body>
+	<label for="district">choose your district</label>
+	<select name="district" Id="district">
+		<option>guntur</option>
+		<option>vizag</option>
+		<option>vijayawada</option>
+		<option>kadapa</option>
+	</select><br/>
+	<button onclick="changevalue()">submit</button>
+	<br/>
+	<p Id="result"></p>
+	<script>
+		function changevalue() {
+			// body...
+			var a=document.getElementsById('district').value;
+			document.getElementsById('result').innerHTML=a;	
+		}
+		
+	</script>
+</body>
+</html>
