@@ -1,0 +1,38 @@
+<?php
+	$email=$_POST['emailid'];
+
+	echo $email;
+	$server="localhost:3306";
+	$dbname="web-dev";
+	$User: "root@localhost";
+	$password="";
+
+	$sflag=0;
+
+	$conn=mysqli_connect($server,$dbname,$User,$password)
+	if (!$conn) {
+		// code...
+		echo "server connection failed";
+		$sflag=0;
+	}else{
+		echo "server connection authorised";
+		$sflag=1;
+	}
+
+	if ($sflag==1) {
+		// create sql injection into table...
+		$sql="INSERT INTO emailform(emailid) array_values(
+		".$email.");
+
+		$a=$conn-->query( $sql);
+
+		if($a)
+		{
+			echo "data inserted successfully";
+		}
+		else
+		{
+			echo "data failure";
+		}
+	}
+?>lkv 
